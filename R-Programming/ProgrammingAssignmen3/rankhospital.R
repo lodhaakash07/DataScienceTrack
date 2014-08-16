@@ -3,12 +3,11 @@
 # Course 2 - R Programming
 
 # Programming Assignment 3
-# Part 1
+# Part 2
 
 
-best <- function(state, outcome) {
+rankhospital <- function(state, outcome, num = "best") {
   ## Read outcome data
-  ## Analysing the data we see na values are = "Not Available"
   data <- read.csv("outcome-of-care-measures.csv",colClasses="character",na.strings="Not Available")
   ## We only need column 2,7,11,17,23
   data <- data[complete.cases(data),c(2,7,11,17,23)]
@@ -24,14 +23,25 @@ best <- function(state, outcome) {
     stop("invalid outcome")
   }
   
-  ## Return hospital name in that state with lowest 30-day death
-  
+  ## Return hospital name in that state with the given rank
   ## Lets first take only that state and the particular outcome
   
   data <- data[(data$State==state),c("name",outcome)]
   data[outcome] <- as.numeric(data[[outcome]])
   data <- data[order(data[outcome],data$name),]
-  data[[1]][[1]]
-  ## now return the minimum value
-  ## rate
+  
+  
+  ## 30-day death rate
+  
+  a<- if(num == "best") {
+    data[1,"name"]
+  } else if(num == "worst") {
+    data[nrow(data),"name"]
+  } else if( nrow(data) < num ) {
+    "NA"
+  } else {
+    data[num,"name"]
+  }
+      
+  a
 }
