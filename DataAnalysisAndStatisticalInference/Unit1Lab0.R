@@ -83,42 +83,6 @@ with(present,plot(year,boys/girls))
     # 2002
     # 1940
 
-# Question 9
-# The following questions are not graded, but your feedback is very much appreciated and immensely useful for the development of the course.
-    # 
-    # This lab covered material that is covered in the class.
-    # Strongly Disagree
-    # Disagree
-    # Neutral
-    # Agree
-    # Strongly Agree
-# Question 10
-# The lab improved your understanding of these topics.
-# Strongly Disagree
-# Disagree
-# Neutral
-# Agree
-# Strongly Agree
-# Question 11
-# The instructions were clear and it was easy to understand what was wanted.
-# Strongly Disagree
-# Disagree
-# Neutral
-# Agree
-# Strongly Agree
-# Question 12
-# The data was relevant and interesting to me.
-# Strongly Disagree
-# Disagree
-# Neutral
-# Agree
-# Strongly Agree
-# Question 13
-# The length of time taken to complete a lab is ...
-# Less than half an hour
-# Between half hour and hour
-# Between 1 hour and 2 hours
-# More than 2 hours
 
   
 
